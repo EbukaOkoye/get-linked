@@ -17,7 +17,7 @@ const RegisterBanner = () => {
                 <div className="form-container  bg-gradient-to-tl from-transparent to-mainBlue py-4 px-8">
                     <img className='w-5 h-5 ml-auto mr-20' src={purple} alt="" />
                     <h2 className='text-xl lg:text-3xl text-brightPurple font-custom font-bold py-3'>Register</h2>
-                    <p>
+                    <p className='flex '>
                         <span className='text-xs text-white font-mont'>Be part of this movement!</span>
                         <span><img src={woman} alt="" /></span>
                         <span><img src={man} alt="" /></span>
