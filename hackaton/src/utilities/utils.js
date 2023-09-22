@@ -49,15 +49,15 @@ export const white = starWhite
 export const navLinks = [
     {
         link: 'TimeLine',
-        path: '/timeline'
+        path: '#timeline'
     },
     {
         link: 'Overview',
-        path: '/overview',
+        path: '#overview',
     },
     {
         link: 'FAQs',
-        path: '/faqs'
+        path: '#faqs'
     },
     {
         link: 'Contact',
@@ -130,5 +130,28 @@ export const licenseTerms = [
     {
         src: listCheck,
         text: 'You are licensed to use the item available at any free source sites, for your project developement'
+    },
+]
+
+export const size = [
+    {
+        value: 1,
+        size: 1
+    },
+    {
+        value: 2,
+        size: 2
+    },
+    {
+        value: 3,
+        size: 3
+    },
+    {
+        value: 4,
+        size: 4
+    },
+    {
+        value: 5,
+        size: 5
     },
 ]
