@@ -80,13 +80,13 @@ const RegisterBanner = () => {
 
   return (
     <>
-      <div className="register-banner bg-mainBlue grid grid-cols-1 lg:grid-cols-2 gap-5 p-8 left-banner banner-left-blur">
-        <div className="left-img">
+      <div className="register-banner bg-mainBlue grid grid-cols-1 lg:grid-cols-2 gap-5 p-8 left-banner 2xl:place-items-center banner-left-blur min-h-screen">
+        <div className="left-img lg:w-full">
           <img className="w-5 h-5 ml-12" src={purple} alt="" />
-          <img src={image} alt="" />
+          <img className=" xl:w-full" src={image} alt="" />
           <img className="w-5 h-5 mb-8" src={grey} alt="" />
         </div>
-        <div className="right-form">
+        <div className="right-form lg:w-full 2xl:w-full">
           <div className="form-container bg-gradient-to-tl from-transparent to-mainBlue py-4 px-8 md:w-8/12 md:mx-auto lg:mx-0 lg:w-full">
             <img className="w-5 h-5 ml-auto mr-20" src={purple} alt="" />
             <h2 className="text-xl lg:text-3xl text-brightPurple font-custom font-bold py-3">

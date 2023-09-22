@@ -10,12 +10,14 @@ const PrizesAndRewards = () => {
             className="w-4 h-4 absolute top-8 left-1/4"
             src={purple}
             alt=""
+            loading="lazy"
           />
-          <img className="w-full" src={trophy} alt="" />
+          <img className="w-full" src={trophy} alt="" loading="lazy" />
           <img
             className="w-4 h-4 absolute bottom-2 left-1/3"
             src={white}
             alt=""
+            loading="lazy"
           />
         </div>
         <div className="right w-full relative p-4">
@@ -31,11 +33,31 @@ const PrizesAndRewards = () => {
               participants.
             </p>
           </div>
-          <img className="w-4 h-4 absolute top-[15%] right-[30%]" src={purple} alt="" />
-          <img className="w-4 h-4 absolute top-1/3 left-28 hidden lg:block" src={white} alt="" />
-          <img className="w-4 h-4 absolute top-2/4 right-8" src={white} alt="" />
-          <img src={medals} alt="" />
-          <img className="w-4 h-4 absolute bottom-3 right-16" src={grey} alt="" />
+          <img
+            className="w-4 h-4 absolute top-[15%] right-[30%]"
+            src={purple}
+            alt=""
+            loading="lazy"
+          />
+          <img
+            className="w-4 h-4 absolute top-1/3 left-28 hidden lg:block"
+            src={white}
+            alt=""
+            loading="lazy"
+          />
+          <img
+            className="w-4 h-4 absolute top-2/4 right-8"
+            src={white}
+            alt=""
+            loading="lazy"
+          />
+          <img src={medals} alt="" loading="lazy" />
+          <img
+            className="w-4 h-4 absolute bottom-3 right-16"
+            src={grey}
+            alt=""
+            loading="lazy"
+          />
         </div>
       </div>
     </>

@@ -12,8 +12,8 @@ const Partners = () => {
           Getlinked Hackathon 1.0 is honored to have the following major
           companies as its partners and sponsors
         </p>
-        <img className="w-4 h-4 mt-10 ml-16" src={purple} alt="" />
-        <img className="mt-8 mb-16" src={partner} alt="" />
+        <img className="w-4 h-4 mt-10 ml-16" src={purple} alt="" loading="lazy" />
+        <img className="mt-8 mb-16" src={partner} alt="" loading="lazy" />
       </div>
     </>
   );

@@ -1,6 +1,12 @@
 import ButtonCustom from "../../../customs/ButtonCustom";
-import { grey, licenseTerms, lockMan, purple, white } from "../../../utilities/utils";
-import '../banner.css'
+import {
+  grey,
+  licenseTerms,
+  lockMan,
+  purple,
+  white,
+} from "../../../utilities/utils";
+import "../banner.css";
 
 const Privacy = () => {
   return (
@@ -12,6 +18,7 @@ const Privacy = () => {
               className="w-4 h-4 absolute right-1/3 top-2"
               src={grey}
               alt=""
+              loading="lazy"
             />
             <h2 className="text-xl lg:text-3xl text-white font-custom font-bold text-center lg:text-left">
               Privacy Policy and{" "}
@@ -26,6 +33,7 @@ const Privacy = () => {
               className="w-4 h-4 absolute right-5 top-28"
               src={purple}
               alt=""
+              loading="lazy"
             />
             <p className="pt-6 text-white font-mont text-sm pb-8 text-center lg:text-left">
               Below are our privacy & policy, which outline a lot of goodies.
@@ -42,28 +50,52 @@ const Privacy = () => {
               in this policy.
             </p>
             <div className="licensing w-full">
-                <h4 className="text-lg text-brightPurple font-mont font-bold my-3">Licensing Policy</h4>
-                <p className="text-sm text-white font-mont my-3">Here are terms of our Standard License:</p>
-                <div className="license-terms py-8">
-                    {
-                        licenseTerms?.map( (license, index) => (
-                            <div className="flex gap-3 my-5 items-start" key={index}>
-                                <img src={license?.src} alt="" />
-                                <p className="text-white text-sm font-mont">{license?.text}</p>
-                            </div>
-                        ))
-                    }
-                </div>
+              <h4 className="text-lg text-brightPurple font-mont font-bold my-3">
+                Licensing Policy
+              </h4>
+              <p className="text-sm text-white font-mont my-3">
+                Here are terms of our Standard License:
+              </p>
+              <div className="license-terms py-8">
+                {licenseTerms?.map((license, index) => (
+                  <div className="flex gap-3 my-5 items-start" key={index}>
+                    <img src={license?.src} alt="" loading="lazy" />
+                    <p className="text-white text-sm font-mont">
+                      {license?.text}
+                    </p>
+                  </div>
+                ))}
+              </div>
             </div>
-            <ButtonCustom text='Read More'/>
+            <ButtonCustom text="Read More" />
           </div>
         </div>
         <div className="right lock-bg relative w-full">
-            <img className="w-3 h-3 absolute top-24 right-10" src={white} alt="" />
-            <img className="lg:mt-44 mt-40" src={lockMan} alt="" />
-            <img className="w-5 h-5 absolute bottom-36 md:right-8 right-2" src={grey} alt="" />
-            <img className="w-3 h-3 absolute bottom-1/3 md:left-32 left-20" src={purple} alt="" />
-            <img className="w-3 h-3 absolute bottom-1/4 md:left-24 left-16" src={white} alt="" />
+          <img
+            className="w-3 h-3 absolute top-24 right-10"
+            src={white}
+            alt=""
+            loading="lazy"
+          />
+          <img className="lg:mt-44 mt-40" src={lockMan} alt="" loading="lazy" />
+          <img
+            className="w-5 h-5 absolute bottom-36 md:right-8 right-2"
+            src={grey}
+            alt=""
+            loading="lazy"
+          />
+          <img
+            className="w-3 h-3 absolute bottom-1/3 md:left-32 left-20"
+            src={purple}
+            alt=""
+            loading="lazy"
+          />
+          <img
+            className="w-3 h-3 absolute bottom-1/4 md:left-24 left-16"
+            src={white}
+            alt=""
+            loading="lazy"
+          />
         </div>
       </div>
     </>

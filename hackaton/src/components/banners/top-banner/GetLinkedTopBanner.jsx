@@ -21,11 +21,11 @@ const GetLinkedTopBanner = () => {
             </span>
             <span className="">
               {" "}
-              <img className="mx-auto lg:hidden" src={curve} alt="" />
+              <img className="mx-auto lg:hidden" src={curve} alt="" loading="lazy" />
             </span>
           </div>
 
-          <img className="w-3 h-3 ml-8 lg:ml-20" src={star} alt="star-icon" />
+          <img className="w-3 h-3 ml-8 lg:ml-20" src={star} alt="star-icon" loading="lazy" />
           <div className="text-center lg:text-left mt-4">
             
             <h2 className="text-2xl py-1 lg:text-6xl flex justify-center lg:justify-start font-bold text-white font-custom">
@@ -35,6 +35,7 @@ const GetLinkedTopBanner = () => {
               className="w-6 h-6 -translate-x-7 -translate-y-4 lg:-translate-x-14 lg:-translate-y-2"
               src={bulb}
               alt=""
+              loading="lazy"
             />
               </span>
             </h2>
@@ -46,11 +47,13 @@ const GetLinkedTopBanner = () => {
                 className="w-6 h-6 mx-1 lg:w-12 lg:h-12"
                 src={chain}
                 alt=""
+                loading="lazy"
               />
               <img
                 className="w-6 h-6 mx-1 lg:w-12 lg:h-12"
                 src={explosive}
                 alt=""
+                loading="lazy"
               />
             </div>
             <p className="text-lg text-white py-2 font-mont">
@@ -58,7 +61,7 @@ const GetLinkedTopBanner = () => {
               <br className="lg:block" /> stand a chance to win a Big prize
             </p>
             <ButtonCustom text="Register" />
-            <img className="w-3 h-3 mt-10 ml-[75%]" src={greyStar} alt="" />
+            <img className="w-3 h-3 mt-10 ml-[75%]" src={greyStar} alt="" loading="lazy" />
             <p className="text-white text-2xl lg:text-5xl">
               00<sub className="text-xs lg:text-sm">H</sub> 00
               <sub className="text-xs lg:text-sm">M</sub> 00
@@ -71,19 +74,21 @@ const GetLinkedTopBanner = () => {
             Igniting a Revolution in HR Innovation{" "}
             <span className="ml-auto">
               {" "}
-              <img src={curve} alt="" />
+              <img src={curve} alt="" loading="lazy" />
             </span>
           </p>
-          <img src={vrMan} alt="man-with-vr-glasses" />
+          <img src={vrMan} alt="man-with-vr-glasses" loading="lazy" />
           <img
             className="absolute bottom-10 z-20 right-48"
             src={matrix}
             alt=""
+            loading="lazy"
           />
           <img
             className="absolute top-4 left-4 z-40"
             src={matrixBright}
             alt=""
+            loading="lazy"
           />
         </div>
       </div>

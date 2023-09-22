@@ -8,7 +8,7 @@ const IntroBanner = () => {
     <>
       <div ref={overviewRef} id="overview" className="bg-mainBlue px-4 py-8 grid grid-cols-1 gap-3 lg:grid-cols-2 place-items-center">
         <div className="img w-full p-4">
-          <img className="mx-auto lg:mx-0" src={bulb} alt="" />
+          <img className="mx-auto lg:mx-0" src={bulb} alt="" loading="lazy" />
         </div>
         <div className="right-text p-4">
           <div className="right-header justify-center lg:justify-start flex items-center">
@@ -20,7 +20,7 @@ const IntroBanner = () => {
                 tech Hackathon 1.0
               </h2>
             </div>
-            <img className="w-3 h-3 lg:w-10 lg:h-10 lg:ml-16" src={purpleStar} alt="" />
+            <img className="w-3 h-3 lg:w-10 lg:h-10 lg:ml-16" src={purpleStar} alt="" loading="lazy" />
           </div>
           <p className="text-white text-sm leading-8 py-4 text-center lg:text-left font-mont">
             Our tech hackathon is a melting pot of visionaries, and its purpose
