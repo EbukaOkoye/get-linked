@@ -1,17 +1,26 @@
-import axios from 'axios'
+import ApiAuth from "../../api/ApiAuth";
 import image from "../../assets/contact-img.svg";
 import { grey, purple } from "../../utilities/utils";
 import man from "../../assets/walking-man.svg";
 import woman from "../../assets/walking-girl.svg";
 import "../banners/banner.css";
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 const RegisterBanner = () => {
     const [ category, setCategory ] = useState([])
 
-    const getCategory = () => {
-
-    }
+    useEffect( () => {
+        const getCategory = async () => {
+            try {
+                const res = await ApiAuth.get('/hackathon/categories-list')
+                console.log(res?.data)
+                setCategory(res?.data)
+            } catch (error) {
+               console.log(error) 
+            }
+        }
+        getCategory()
+    }, [])
 
   return (
     <>
@@ -22,7 +31,7 @@ const RegisterBanner = () => {
           <img className="w-5 h-5 mb-8" src={grey} alt="" />
         </div>
         <div className="right-form">
-          <div className="form-container  bg-gradient-to-tl from-transparent to-mainBlue py-4 px-8">
+          <div className="form-container bg-gradient-to-tl from-transparent to-mainBlue py-4 px-8 md:w-8/12 md:mx-auto lg:mx-0 lg:w-full">
             <img className="w-5 h-5 ml-auto mr-20" src={purple} alt="" />
             <h2 className="text-xl lg:text-3xl text-brightPurple font-custom font-bold py-3">
               Register
@@ -110,6 +119,15 @@ const RegisterBanner = () => {
                   >
                     Category
                   </label>
+                  <select id="category">
+                    {
+                        category?.map( (categories, index) => (
+                            <option value="" key={index}>
+
+                            </option>
+                        ))
+                    }
+                  </select>
                 </div>
               </div>
             </form>
