@@ -8,9 +8,9 @@ const Criteria = () => {
     <>
       <div className="px-8 py-6 grid place-items-center grid-cols-1 lg:grid-cols-2 gap-5 bg-mainBlue left-flare">
         <div className="left w-full relative">
-          <img className="w-4 h-4 absolute left-1/4" src={purple} alt="" />
-          <img className="mt-8 py-10" src={criteria} alt="" />
-          <img className="w-4 h-4 absolute right-10" src={white} alt="" />
+          <img className="w-4 h-4 absolute left-1/4" src={purple} alt="" loading="lazy" />
+          <img className="mt-8 py-10" src={criteria} alt="" loading="lazy" />
+          <img className="w-4 h-4 absolute right-10" src={white} alt="" loading="lazy" />
         </div>
         <div className="right">
           <h2 className="text-center lg:text-left text-xl lg:text-3xl text-white font-custom font-bold">

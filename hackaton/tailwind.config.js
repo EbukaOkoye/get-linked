@@ -8,7 +8,8 @@ export default {
     extend: {
       fontFamily: {
         custom: ['Clash Display',],
-        mont: 'Montserrat'
+        mont: 'Montserrat',
+        unica: 'UnicaOne'
       },
       colors: {
         mainBlue: '#150E28',

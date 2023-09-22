@@ -11,19 +11,19 @@ const Footer = () => {
   return (
     <>
       <footer className="bg-mainBlue flex flex-col justify-center items-center p-8">
-        <img className="w-4 h-4 " src={white} alt="" />
+        <img className="w-4 h-4 " src={white} alt="" loading="lazy" />
         <div className="flex flex-col lg:flex-row lg:justify-between p-4 gap-5">
           <div className="get-linked-footer relative left-side w-full">
-            <img src={logo} alt="" />
+            <img src={logo} alt="" loading="lazy" />
             <p className="pt-3 text-xs font-mont text-white leading-6">
               Getlinked Tech Hackathon is a technology innovation program
               established by a group of organizations with the aim of showcasing
               young and talented individuals in the field of technology
             </p>
             <div className="absolute lg:bottom-4 flex items-center gap-2">
-                <p className="text-xs font-mont text-white">Terms of Use</p>
-                <img className="w-3 h-3" src={short} alt="" />
-                <p className="text-xs font-mont text-white">Privacy Policy</p>
+              <p className="text-xs font-mont text-white">Terms of Use</p>
+              <img className="w-3 h-3" src={short} alt="" loading="lazy" />
+              <p className="text-xs font-mont text-white">Privacy Policy</p>
             </div>
           </div>
           <div className="middle w-full relative flex flex-col lg:items-center">
@@ -31,6 +31,7 @@ const Footer = () => {
               className="w-4 h-4 absolute right-4 top-10"
               src={grey}
               alt=""
+              loading="lazy"
             />
             <ul>
               <li className="text-sm text-brightPurple font-mont py-2">
@@ -83,11 +84,18 @@ const Footer = () => {
                 27, Alara Street <br /> Yaba 100012 <br /> Lagos State
               </span>
             </p>
-            <img className="w-4 h-4 ml-auto mr-6" src={white} alt="" />
+            <img
+              className="w-4 h-4 ml-auto mr-6"
+              src={white}
+              alt=""
+              loading="lazy"
+            />
           </div>
         </div>
-        <img className="w-4 h-4" src={purple} alt="" />
-        <p className="text-xs text-white font-mont py-4">All rights reserved. © getlinked Ltd.</p>
+        <img className="w-4 h-4" src={purple} alt="" loading="lazy" />
+        <p className="text-xs text-white font-mont py-4">
+          All rights reserved. © getlinked Ltd.
+        </p>
       </footer>
     </>
   );

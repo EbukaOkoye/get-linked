@@ -12,9 +12,9 @@ import ButtonCustom from "../../customs/ButtonCustom";
 const ContactBanner = () => {
   return (
     <>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:place-items-center bg-mainBlue banner-left banner-left-blur p-5 min-h-screen">
-        <div className="left hidden md:block p-4">
-          <img className="w-4 h-4" src={purple} alt="" />
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:place-items-center bg-mainBlue banner-left banner-left-blur p-5 min-h-screen">
+        <div className="left hidden md:block p-4 xl:w-full">
+          <img className="w-4 h-4" src={purple} alt="" loading="lazy" />
           <div className="left-contact-text">
             <h2 className="lg:text-3xl text-xl text-brightPurple font-custom font-bold py-3">
               Get in touch
@@ -48,8 +48,8 @@ const ContactBanner = () => {
             </p>
           </div>
         </div>
-        <div className="right hidden md:block w-full">
-          <img className="w-4 h-4 ml-auto" src={grey} alt="" />
+        <div className="right hidden md:block w-full xl:w-full">
+          <img className="w-4 h-4 ml-auto" src={grey} alt="" loading="lazy" />
           <div className="contact-form-container bg-gradient-to-tl from-transparent to-mainBlue py-4 px-8 md:w-full lg:w-9/12 rounded-md shadow-xl">
             <h2 className="text-lg text-brightPurple font-bold font-custom py-1">
               Questions or need assistance?
@@ -79,14 +79,14 @@ const ContactBanner = () => {
               <ButtonCustom text="Submit" className="flex mx-auto" />
             </form>
           </div>
-          <img className="w-4 h-4 ml-auto mr-24" src={white} alt="" />
+          <img className="w-4 h-4 ml-auto mr-24" src={white} alt="" loading="lazy" />
         </div>
         <div className="small-screens md:hidden">
-          <img className="w-3 h-3 mx-auto" src={purple} alt="" />
+          <img className="w-3 h-3 mx-auto" src={purple} alt="" loading="lazy" />
           <h2 className="text-lg text-brightPurple font-custom font-bold py-3">
             Questions or need <br /> assistance? <br /> Let us know about it
           </h2>
-          <img className="w-3 h-3 ml-auto -mt-4" src={white} alt="" />
+          <img className="w-3 h-3 ml-auto -mt-4" src={white} alt="" loading="lazy" />
           <p className="text-sm text-white font-mont py-3">
             Email us below to any question related to our event
           </p>
