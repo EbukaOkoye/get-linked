@@ -17,6 +17,7 @@ import starPurple from '../assets/purple-star.svg'
 import starWhite from '../assets/star.svg'
 import lineLong from '../assets/Line-3.svg'
 import lineShort from '../assets/Line-4.svg'
+import success from '../assets/confirmation.svg'
 
 
 
@@ -26,6 +27,7 @@ import lineShort from '../assets/Line-4.svg'
 
 export const brightQuestion = questionBright
 export const darkQuestion = questionDark
+export const done = success
 export const five = noFive
 export const four = noFour
 export const grey = starGrey

@@ -4,7 +4,7 @@ import "../banner.css";
 const Partners = () => {
   return (
     <>
-      <div className="bg-mainBlue p-4 left-banner-left banner-left-blur">
+      <div className="bg-mainBlue p-4 left-banner-left banner-left-blur flex flex-col items-center">
         <h2 className="text-center text-white lg:text-3xl text-xl font-bold font-custom mt-24">
           Partners and Sponsors
         </h2>

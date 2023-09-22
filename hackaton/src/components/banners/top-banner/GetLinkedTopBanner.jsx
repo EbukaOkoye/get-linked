@@ -26,14 +26,17 @@ const GetLinkedTopBanner = () => {
           </div>
 
           <img className="w-3 h-3 ml-8 lg:ml-20" src={star} alt="star-icon" />
-          <div className="text-center relative lg:text-left mt-4">
-            <img
-              className="w-6 h-6 right-[22%] -top-3 md:right-[40%] lg:w-12 lg:h-12 absolute lg:right-56 lg:-top-8"
+          <div className="text-center lg:text-left mt-4">
+            
+            <h2 className="text-2xl py-1 lg:text-6xl flex justify-center lg:justify-start font-bold text-white font-custom">
+              getlinked Tech
+              <span>
+              <img
+              className="w-6 h-6 -translate-x-7 -translate-y-4 lg:-translate-x-14 lg:-translate-y-2"
               src={bulb}
               alt=""
             />
-            <h2 className="text-2xl py-1 lg:text-6xl font-bold text-white font-custom ">
-              getlinked Tech
+              </span>
             </h2>
             <div className="hackaton-creative flex items-center w-fit mx-auto lg:w-fit lg:mx-0">
               <h2 className="text-2xl lg:text-6xl text-white font-custom">

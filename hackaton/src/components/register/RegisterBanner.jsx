@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import axios from "axios";
 import ButtonCustom from "../../customs/ButtonCustom";
 import image from "../../assets/contact-img.svg";
@@ -8,11 +9,13 @@ import { useForm } from "react-hook-form";
 import { useEffect, useState } from "react";
 import woman from "../../assets/walking-girl.svg";
 import "../banners/banner.css";
-import 'react-toastify/dist/ReactToastify.css';
+import "react-toastify/dist/ReactToastify.css";
+import ConfirmationModal from "./ConfirmationModal";
 
 const RegisterBanner = () => {
   const [category, setCategory] = useState([]);
-  const { register, handleSubmit, } = useForm();
+  const [modal, setModal] = useState(false);
+  const { register, handleSubmit } = useForm();
   const baseUrl = "https://backend.getlinked.ai";
 
   useEffect(() => {
@@ -27,6 +30,8 @@ const RegisterBanner = () => {
     };
     getCategory();
   }, []);
+
+  
 
   const successMsg = (message) => {
     toast.success(message, {
@@ -47,23 +52,31 @@ const RegisterBanner = () => {
   };
 
   const submit = async (data) => {
-    
-
-    
     if (!data.privacy_poclicy_accepted) {
-        warningMsg("Please agree to the terms and conditions and privacy policy.");
-        return;
+      warningMsg(
+        "Please agree to the terms and conditions and privacy policy."
+      );
+      return;
     }
 
     try {
-       const res = await axios.post(`${baseUrl}/hackathon/registration`, data) 
-       console.log('Form submitted successfully:', res.data);
-       successMsg('Form submitted successfully')
+      const res = await axios.post(`${baseUrl}/hackathon/registration`, data);
+      console.log("Form submitted successfully:", res.data);
+      successMsg("Form submitted successfully");
+      setModal(!modal)
     } catch (error) {
-        console.log(error)
-        errorMsg(error)
+      console.log(error);
+      errorMsg(error);
     }
   };
+
+  const closeModal = () => {
+    setModal(false)
+  }
+
+  setTimeout(() => {
+    closeModal()
+  }, 5000);
 
   return (
     <>
@@ -106,7 +119,7 @@ const RegisterBanner = () => {
                     id="team"
                     className="w-full rounded-md p-2 font-mont text-sm border border-white text-white bg-white bg-opacity-10 focus:outline-none my-3"
                     type="text"
-                    {...register('team_name',)}
+                    {...register("team_name")}
                     placeholder="Enter the name of your group"
                   />
                 </div>
@@ -119,7 +132,7 @@ const RegisterBanner = () => {
                   </label>
                   <input
                     id="phone"
-                    {...register('phone_number')}
+                    {...register("phone_number")}
                     className="w-full rounded-md p-2 font-mont text-sm border border-white text-white bg-white bg-opacity-10 focus:outline-none my-3"
                     type="text"
                     placeholder="Enter your phone number"
@@ -136,7 +149,7 @@ const RegisterBanner = () => {
                   </label>
                   <input
                     id="email"
-                    {...register('email')}
+                    {...register("email")}
                     className="w-full rounded-md p-2 font-mont text-sm border border-white text-white bg-white bg-opacity-10 focus:outline-none my-3"
                     type="email"
                     placeholder="Enter your email address"
@@ -151,7 +164,7 @@ const RegisterBanner = () => {
                   </label>
                   <input
                     id="topic"
-                    {...register('project_topic')}
+                    {...register("project_topic")}
                     className="w-full rounded-md p-2 font-mont text-sm border border-white text-white bg-white bg-opacity-10 focus:outline-none my-3"
                     type="text"
                     placeholder="What is your group project topic"
@@ -169,7 +182,7 @@ const RegisterBanner = () => {
                   <select
                     className="w-full rounded-md p-2 font-mont text-sm border border-white text-white bg-white bg-opacity-10 focus:outline-none my-3"
                     id="category"
-                    {...register('category')}
+                    {...register("category")}
                   >
                     <option
                       value="Select a Category"
@@ -196,7 +209,7 @@ const RegisterBanner = () => {
                   <select
                     className="w-full rounded-md p-2 font-mont text-sm border border-white text-white bg-white bg-opacity-10 focus:outline-none my-3"
                     id="size"
-                    {...register('group_size')}
+                    {...register("group_size")}
                   >
                     <option
                       value="Select"
@@ -222,8 +235,8 @@ const RegisterBanner = () => {
                   type="checkbox"
                   id="agreed"
                   className="mr-2"
-                  required 
-                  {...register('privacy_poclicy_accepted')}
+                  required
+                  {...register("privacy_poclicy_accepted")}
                 />
                 <label
                   htmlFor="agreed"
@@ -241,7 +254,8 @@ const RegisterBanner = () => {
           </div>
         </div>
       </div>
-      <ToastContainer/>
+      <ToastContainer />
+      {<ConfirmationModal isVisible={modal} onClose={() => closeModal}/>}
     </>
   );
 };
