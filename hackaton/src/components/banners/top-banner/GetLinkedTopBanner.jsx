@@ -62,10 +62,10 @@ const GetLinkedTopBanner = () => {
             </p>
             <ButtonCustom text="Register" />
             <img className="w-3 h-3 mt-10 ml-[75%]" src={greyStar} alt="" loading="lazy" />
-            <p className="text-white text-2xl lg:text-5xl">
-              00<sub className="text-xs lg:text-sm">H</sub> 00
-              <sub className="text-xs lg:text-sm">M</sub> 00
-              <sub className="text-xs lg:text-sm">S</sub>
+            <p className="text-white text-2xl lg:text-5xl font-unica">
+              00<sub className="text-xs lg:text-sm font-unica">H</sub> 00
+              <sub className="text-xs lg:text-sm font-unica">M</sub> 00
+              <sub className="text-xs lg:text-sm font-unica">S</sub>
             </p>
           </div>
         </div>
