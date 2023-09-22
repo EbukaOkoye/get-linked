@@ -13,6 +13,7 @@ import { useForm } from "react-hook-form";
 import "../banners/banner.css";
 
 const ContactBanner = () => {
+  // API BaseUrl
   const baseUrl = "https://backend.getlinked.ai";
 
   const { register, handleSubmit } = useForm()
