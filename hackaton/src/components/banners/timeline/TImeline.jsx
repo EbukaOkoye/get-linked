@@ -9,16 +9,19 @@ import {
   three,
   two,
 } from "../../../utilities/utils";
+import LazyLoading from "react-lazyload";
 import { useRef } from "react";
 
-
-
 const TImeline = () => {
-  const timelineRef = useRef()
-  
+  const timelineRef = useRef();
+
   return (
     <>
-      <div id="timeline" ref={timelineRef} className="flex flex-col items-center bg-mainBlue p-8">
+      <div
+        id="timeline"
+        ref={timelineRef}
+        className="flex flex-col items-center bg-mainBlue p-8"
+      >
         <h2 className="text-white md:text-3xl text-xl font-custom font-bold">
           Timeline
         </h2>
@@ -74,28 +77,28 @@ const TImeline = () => {
 
           <div className="middle w-full p-4 flex flex-col justify-between items-center">
             <div className="flex flex-col items-center">
-              <img src={long} alt="" loading="lazy" />
-              <img src={one} alt="" loading="lazy" />
+              <img src={long} alt="" />
+              <img src={one} alt="" />
             </div>
             <div className="flex flex-col items-center">
-              <img className="my-3" src={short} alt="" loading="lazy" />
-              <img src={two} alt="" loading="lazy" />
+              <img className="my-3" src={short} alt="" />
+              <img src={two} alt="" />
             </div>
             <div className="flex flex-col items-center">
-              <img className="my-3" src={short} alt="" loading="lazy" />
-              <img className="" src={three} alt="" loading="lazy" />
+              <img className="my-3" src={short} alt="" />
+              <img className="" src={three} alt="" />
             </div>
             <div className="flex flex-col items-center">
-              <img className="my-3" src={short} alt="" loading="lazy" />
-              <img className="" src={four} alt="" loading="lazy" />
+              <img className="my-3" src={short} alt="" />
+              <img className="" src={four} alt="" />
             </div>
             <div className="flex flex-col items-center">
-              <img className="my-3" src={short} alt="" loading="lazy" />
-              <img className="" src={five} alt="" loading="lazy" />
+              <img className="my-3" src={short} alt="" />
+              <img className="" src={five} alt="" />
             </div>
             <div className="flex flex-col items-center">
-              <img className="my-3" src={short} alt="" loading="lazy" />
-              <img className="" src={six} alt="" loading="lazy" />
+              <img className="my-3" src={short} alt="" />
+              <img className="" src={six} alt="" />
             </div>
           </div>
 
@@ -147,8 +150,10 @@ const TImeline = () => {
         <div className="bg-mainBlue lg:hidden">
           <div className="flex space-x-4 items-center my-4">
             <div className="flex flex-col items-center">
-              <img className="my-3" src={short} alt="" loading="lazy" />
-              <img className="" src={one} alt="" loading="lazy" />
+              <LazyLoading height="100vh" offset={5}>
+                <img className="my-3" src={short} alt="" />
+                <img className="" src={one} alt="" />
+              </LazyLoading>
             </div>
             <div className="content-text">
               <h2 className="text-xs text-brightPurple font-mont font-bold py-2">
@@ -165,8 +170,10 @@ const TImeline = () => {
           </div>
           <div className="flex space-x-4 items-center my-4">
             <div className="flex flex-col items-center">
-              <img className="my-3" src={short} alt="" loading="lazy" />
-              <img className="" src={two} alt="" loading="lazy" />
+              <LazyLoading height="100vh" offset={5}>
+                <img className="my-3" src={short} alt="" />
+                <img className="" src={two} alt="" />
+              </LazyLoading>
             </div>
             <div className="content-text">
               <h2 className="text-xs text-brightPurple font-mont font-bold py-2">
@@ -183,8 +190,10 @@ const TImeline = () => {
           </div>
           <div className="flex space-x-4 items-center my-4">
             <div className="flex flex-col items-center">
-              <img className="my-3" src={short} alt="" loading="lazy" />
-              <img className="w-6 h-6" src={three} alt="" loading="lazy" />
+              <LazyLoading height="100vh" offset={5}>
+                <img className="my-3" src={short} alt="" loading="lazy" />
+                <img className="w-6 h-6" src={three} alt="" loading="lazy" />
+              </LazyLoading>
             </div>
             <div className="content-text">
               <h2 className="text-xs text-brightPurple font-mont font-bold py-2">
@@ -200,8 +209,10 @@ const TImeline = () => {
           </div>
           <div className="flex space-x-4 items-center my-4">
             <div className="flex flex-col items-center">
-              <img className="my-3" src={short} alt="" loading="lazy" />
-              <img className="" src={four} alt="" loading="lazy" />
+              <LazyLoading height="100vh" offset={5}>
+                <img className="my-3" src={short} alt="" loading="lazy" />
+                <img className="" src={four} alt="" loading="lazy" />
+              </LazyLoading>
             </div>
             <div className="content-text">
               <h2 className="text-xs text-brightPurple font-mont font-bold py-2">
@@ -218,8 +229,10 @@ const TImeline = () => {
           </div>
           <div className="flex space-x-4 items-center my-4">
             <div className="flex flex-col items-center">
-              <img className="my-3" src={short} alt="" loading="lazy" />
-              <img className="w-10 h-10" src={five} alt="" loading="lazy" />
+              <LazyLoading height="100vh" offset={5}>
+                <img className="my-3" src={short} alt="" loading="lazy" />
+                <img className="w-10 h-10" src={five} alt="" loading="lazy" />
+              </LazyLoading>
             </div>
             <div className="content-text">
               <h2 className="text-xs text-brightPurple font-mont font-bold py-2">
@@ -236,8 +249,10 @@ const TImeline = () => {
           </div>
           <div className="flex space-x-4 items-center my-4">
             <div className="flex flex-col items-center">
-              <img className="my-3" src={short} alt="" loading="lazy" />
-              <img className="" src={six} alt="" loading="lazy" />
+              <LazyLoading height="100vh" offset={5}>
+                <img className="my-3" src={short} alt="" loading="lazy" />
+                <img className="" src={six} alt="" loading="lazy" />
+              </LazyLoading>
             </div>
             <div className="content-text">
               <h2 className="text-xs text-brightPurple font-mont font-bold py-2">
