@@ -6,6 +6,7 @@ import {
   purple,
   white,
 } from "../../../utilities/utils";
+import LazyLoad from 'react-lazyload'
 import "../banner.css";
 
 const Privacy = () => {
@@ -77,7 +78,9 @@ const Privacy = () => {
             alt=""
             loading="lazy"
           />
-          <img className="lg:mt-44 mt-40" src={lockMan} alt="" loading="lazy" />
+          <LazyLoad height='30vh' offset={40}>
+          <img className="lg:mt-44 mt-40" src={lockMan} alt="" />
+          </LazyLoad>
           <img
             className="w-5 h-5 absolute bottom-36 md:right-8 right-2"
             src={grey}

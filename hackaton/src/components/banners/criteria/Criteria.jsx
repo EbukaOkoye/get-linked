@@ -1,6 +1,7 @@
 import criteria from "../../../assets/criteria.svg";
 import ButtonCustom from "../../../customs/ButtonCustom";
 import { criterium, purple, white } from "../../../utilities/utils";
+import LazyLoading from 'react-lazyload'
 import "../banner.css";
 
 const Criteria = () => {
@@ -8,8 +9,12 @@ const Criteria = () => {
     <>
       <div className="px-8 py-6 grid place-items-center grid-cols-1 lg:grid-cols-2 gap-5 bg-mainBlue left-flare">
         <div className="left w-full relative">
-          <img className="w-4 h-4 absolute left-1/4" src={purple} alt="" loading="lazy" />
+          <LazyLoading height='100vh' offset={2}>
+          <img className="w-4 h-4 absolute left-1/4" src={purple} alt="" />
+          </LazyLoading>
+          <LazyLoading height='50vh' offset={50}>
           <img className="mt-8 py-10" src={criteria} alt="" loading="lazy" />
+          </LazyLoading>
           <img className="w-4 h-4 absolute right-10" src={white} alt="" loading="lazy" />
         </div>
         <div className="right">

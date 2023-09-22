@@ -1,5 +1,6 @@
 import greyStar from "../../../assets/grey-star.svg";
 import star from "../../../assets/star.svg";
+import LazyLoading from 'react-lazyload'
 import woman from "../../../assets/woman-at-work.svg";
 
 const RulesGuide = () => {
@@ -11,7 +12,6 @@ const RulesGuide = () => {
             className="w-4 h-4 absolute right-10 lg:right-1/2"
             src={greyStar}
             alt=""
-            loading="lazy"
           />
           <h2 className="text-white text-xl text-center lg:text-left lg:text-3xl pt-4 pb-1 font-custom font-bold">
             Rules and
@@ -32,11 +32,12 @@ const RulesGuide = () => {
             className="w-3 h-3 absolute right-4"
             src={star}
             alt=""
-            loading="lazy"
           />
         </div>
         <div className="right w-full order-1 lg:order-2">
+          <LazyLoading height={400} offset={100}>
           <img src={woman} alt="" loading="lazy" />
+          </LazyLoading>
         </div>
       </div>
     </>

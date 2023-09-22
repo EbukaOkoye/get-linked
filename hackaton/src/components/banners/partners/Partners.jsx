@@ -1,4 +1,5 @@
 import { partner, purple } from "../../../utilities/utils";
+import LazyLoading from "react-lazyload";
 import "../banner.css";
 
 const Partners = () => {
@@ -12,8 +13,10 @@ const Partners = () => {
           Getlinked Hackathon 1.0 is honored to have the following major
           companies as its partners and sponsors
         </p>
-        <img className="w-4 h-4 mt-10 ml-16" src={purple} alt="" loading="lazy" />
-        <img className="mt-8 mb-16" src={partner} alt="" loading="lazy" />
+        <img className="w-4 h-4 mt-10 ml-16" src={purple} alt="" />
+        <LazyLoading height="30vh" offset={30}>
+          <img className="mt-8 mb-16" src={partner} alt="" />
+        </LazyLoading>
       </div>
     </>
   );
