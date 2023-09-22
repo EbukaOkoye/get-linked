@@ -13,11 +13,11 @@ import { useForm } from "react-hook-form";
 import "../banners/banner.css";
 
 const ContactBanner = () => {
-  // API BaseUrl
   const baseUrl = "https://backend.getlinked.ai";
 
   const { register, handleSubmit } = useForm()
 
+  // Success toastify to alert that form is submitted
   const successMsg = (message) => {
     toast.success(message, {
       position: toast.POSITION.TOP_RIGHT,
