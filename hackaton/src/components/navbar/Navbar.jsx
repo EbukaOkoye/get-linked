@@ -3,13 +3,15 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../assets/getlinked.svg";
 import { navLinks } from "../../utilities/utils";
-import { useState } from "react";
+import { useState, } from "react";
 import "../banners/banner.css";
 import ButtonCustom from "../../customs/ButtonCustom";
 
 const Navbar = () => {
   const [openNav, setOpenNav] = useState(false);
   const location = useLocation()
+
+  
 
   return (
     <>

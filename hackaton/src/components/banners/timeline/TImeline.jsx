@@ -9,11 +9,16 @@ import {
   three,
   two,
 } from "../../../utilities/utils";
+import { useRef } from "react";
+
+
 
 const TImeline = () => {
+  const timelineRef = useRef()
+  
   return (
     <>
-      <div className="flex flex-col items-center bg-mainBlue p-8">
+      <div id="timeline" ref={timelineRef} className="flex flex-col items-center bg-mainBlue p-8">
         <h2 className="text-white md:text-3xl text-xl font-custom font-bold">
           Timeline
         </h2>

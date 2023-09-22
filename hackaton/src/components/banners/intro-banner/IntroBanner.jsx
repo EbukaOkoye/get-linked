@@ -1,10 +1,12 @@
+import { useRef } from "react";
 import bulb from "../../../assets/bulb-clipart.svg";
 import purpleStar from "../../../assets/purple-star.svg";
 
 const IntroBanner = () => {
+  const overviewRef = useRef()
   return (
     <>
-      <div className="bg-mainBlue px-4 py-8 grid grid-cols-1 gap-3 lg:grid-cols-2 place-items-center">
+      <div ref={overviewRef} id="overview" className="bg-mainBlue px-4 py-8 grid grid-cols-1 gap-3 lg:grid-cols-2 place-items-center">
         <div className="img w-full p-4">
           <img className="mx-auto lg:mx-0" src={bulb} alt="" />
         </div>
