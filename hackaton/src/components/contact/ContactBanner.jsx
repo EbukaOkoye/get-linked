@@ -141,7 +141,7 @@ const ContactBanner = () => {
                 placeholder="Message"
               ></textarea>
             </div>
-            <ButtonCustom text="Submit" className="flex mx-auto" />
+            <ButtonCustom type='submit' text="Submit" className="flex mx-auto" />
           </form>
           <img className="w-3 h-3 -translate-y-4" src={purple} alt="" />
         </div>
