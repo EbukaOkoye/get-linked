@@ -1,6 +1,6 @@
 import { grey, medals, purple, trophy, white } from "../../../utilities/utils";
 import LazyLoad from "react-lazyload";
-import "../banner.css";
+import "../banner.css"; 
 
 const PrizesAndRewards = () => {
   return (

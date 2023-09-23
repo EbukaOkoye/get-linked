@@ -1,3 +1,5 @@
+import axios from "axios";
+import ButtonCustom from "../../customs/ButtonCustom";
 import {
   AiFillFacebook,
   AiFillLinkedin,
@@ -5,11 +7,33 @@ import {
   AiOutlineTwitter,
 } from "react-icons/ai";
 import { grey, purple, white } from "../../utilities/utils";
-import "../banners/banner.css";
 import { Link } from "react-router-dom";
-import ButtonCustom from "../../customs/ButtonCustom";
+import { ToastContainer, toast } from "react-toastify";
+import { useForm } from "react-hook-form";
+import "../banners/banner.css";
 
 const ContactBanner = () => {
+  const baseUrl = "https://backend.getlinked.ai";
+
+  const { register, handleSubmit } = useForm()
+
+  // Success toastify to alert that form is submitted
+  const successMsg = (message) => {
+    toast.success(message, {
+      position: toast.POSITION.TOP_RIGHT,
+    });
+  };
+
+  const submitContact = async (data) => {
+    try {
+      const res = await axios.post(`${baseUrl}/hackathon/contact-form`, data)
+      console.log("Form submitted successfully:", res.data);
+      successMsg('Form submitted successfully')
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
   return (
     <>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-5 lg:place-items-center bg-mainBlue banner-left banner-left-blur p-5 min-h-screen">
@@ -57,23 +81,26 @@ const ContactBanner = () => {
             <h2 className="text-lg text-brightPurple font-bold font-custom py-1">
               Let us know about it!
             </h2>
-            <form className=" pt-6">
+            <form className=" pt-6" onSubmit={handleSubmit(submitContact)}>
               <div className="team-inputs">
                 <input
                   className="w-full rounded-md p-2 font-mont text-sm border border-white text-white bg-white bg-opacity-10 focus:outline-none my-3"
                   type="text"
                   placeholder="Team’s Name"
+                  {...register('first_name')}
                 />
                 <input
                   className="w-full rounded-md p-2 font-mont text-sm border border-white text-white bg-white bg-opacity-10 focus:outline-none my-3"
                   type="email"
                   placeholder="Mail"
+                  {...register('email')}
                 />
                 <textarea
                   className="w-full rounded-md p-2 font-mont text-sm border border-white text-white bg-white bg-opacity-10 focus:outline-none my-3"
                   cols="30"
                   rows="5"
                   placeholder="Message"
+                  {...register('message')}
                 ></textarea>
               </div>
               <ButtonCustom text="Submit" className="flex mx-auto" />
@@ -114,11 +141,12 @@ const ContactBanner = () => {
                 placeholder="Message"
               ></textarea>
             </div>
-            <ButtonCustom text="Submit" className="flex mx-auto" />
+            <ButtonCustom type='submit' text="Submit" className="flex mx-auto" />
           </form>
           <img className="w-3 h-3 -translate-y-4" src={purple} alt="" />
         </div>
       </div>
+      <ToastContainer/>
     </>
   );
 };
