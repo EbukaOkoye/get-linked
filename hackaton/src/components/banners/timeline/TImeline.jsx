@@ -9,7 +9,6 @@ import {
   three,
   two,
 } from "../../../utilities/utils";
-import LazyLoading from "react-lazyload";
 import { useRef } from "react";
 
 const TImeline = () => {
@@ -150,10 +149,8 @@ const TImeline = () => {
         <div className="bg-mainBlue lg:hidden">
           <div className="flex space-x-4 items-center my-4">
             <div className="flex flex-col items-center">
-              <LazyLoading height="100vh" offset={5}>
-                <img className="my-3" src={short} alt="" />
-                <img className="" src={one} alt="" />
-              </LazyLoading>
+              <img className="my-3" src={short} alt="" />
+              <img className="" src={one} alt="" />
             </div>
             <div className="content-text">
               <h2 className="text-xs text-brightPurple font-mont font-bold py-2">
@@ -170,10 +167,8 @@ const TImeline = () => {
           </div>
           <div className="flex space-x-4 items-center my-4">
             <div className="flex flex-col items-center">
-              <LazyLoading height="100vh" offset={5}>
-                <img className="my-3" src={short} alt="" />
-                <img className="" src={two} alt="" />
-              </LazyLoading>
+              <img className="my-3" src={short} alt="" />
+              <img className="" src={two} alt="" />
             </div>
             <div className="content-text">
               <h2 className="text-xs text-brightPurple font-mont font-bold py-2">
@@ -190,10 +185,8 @@ const TImeline = () => {
           </div>
           <div className="flex space-x-4 items-center my-4">
             <div className="flex flex-col items-center">
-              <LazyLoading height="100vh" offset={5}>
-                <img className="my-3" src={short} alt="" loading="lazy" />
-                <img className="w-6 h-6" src={three} alt="" loading="lazy" />
-              </LazyLoading>
+              <img className="my-3" src={short} alt="" loading="lazy" />
+              <img className="w-6 h-6" src={three} alt="" loading="lazy" />
             </div>
             <div className="content-text">
               <h2 className="text-xs text-brightPurple font-mont font-bold py-2">
@@ -209,10 +202,8 @@ const TImeline = () => {
           </div>
           <div className="flex space-x-4 items-center my-4">
             <div className="flex flex-col items-center">
-              <LazyLoading height="100vh" offset={5}>
-                <img className="my-3" src={short} alt="" loading="lazy" />
-                <img className="" src={four} alt="" loading="lazy" />
-              </LazyLoading>
+              <img className="my-3" src={short} alt="" loading="lazy" />
+              <img className="" src={four} alt="" loading="lazy" />
             </div>
             <div className="content-text">
               <h2 className="text-xs text-brightPurple font-mont font-bold py-2">
@@ -229,10 +220,8 @@ const TImeline = () => {
           </div>
           <div className="flex space-x-4 items-center my-4">
             <div className="flex flex-col items-center">
-              <LazyLoading height="100vh" offset={5}>
-                <img className="my-3" src={short} alt="" loading="lazy" />
-                <img className="w-10 h-10" src={five} alt="" loading="lazy" />
-              </LazyLoading>
+              <img className="my-3" src={short} alt="" loading="lazy" />
+              <img className="w-10 h-10" src={five} alt="" loading="lazy" />
             </div>
             <div className="content-text">
               <h2 className="text-xs text-brightPurple font-mont font-bold py-2">
@@ -249,10 +238,8 @@ const TImeline = () => {
           </div>
           <div className="flex space-x-4 items-center my-4">
             <div className="flex flex-col items-center">
-              <LazyLoading height="100vh" offset={5}>
-                <img className="my-3" src={short} alt="" loading="lazy" />
-                <img className="" src={six} alt="" loading="lazy" />
-              </LazyLoading>
+              <img className="my-3" src={short} alt="" loading="lazy" />
+              <img className="" src={six} alt="" loading="lazy" />
             </div>
             <div className="content-text">
               <h2 className="text-xs text-brightPurple font-mont font-bold py-2">
