@@ -4,6 +4,7 @@ import chain from "../../../assets/chain-9365116-7621444.svg";
 import curve from "../../../assets/curved-line.svg";
 import explosive from "../../../assets/explosive.svg";
 import LazyLoad from "react-lazyload";
+import { Link } from "react-router-dom";
 import matrix from "../../../assets/metrix.svg";
 import matrixBright from "../../../assets/bright-matrix.svg";
 import star from "../../../assets/star.svg";
@@ -61,7 +62,9 @@ const GetLinkedTopBanner = () => {
               Participate in getlinked tech Hackathon 2023{" "}
               <br className="lg:block" /> stand a chance to win a Big prize
             </p>
-            <ButtonCustom text="Register" />
+            <Link to='/register'>
+              <ButtonCustom text="Register" />
+            </Link>
             <img className="w-3 h-3 mt-10 ml-[75%]" src={greyStar} alt="" />
             <p className="text-white text-2xl lg:text-5xl font-unica">
               00<sub className="text-xs lg:text-sm font-unica">H</sub> 00
