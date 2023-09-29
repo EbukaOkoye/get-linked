@@ -8,6 +8,7 @@ import RulesGuide from "../../components/banners/rules-banner/RulesGuide"
 import TImeline from "../../components/banners/timeline/TImeline"
 import GetLinkedTopBanner from "../../components/banners/top-banner/GetLinkedTopBanner"
 import Footer from "../../components/footer/Footer"
+import HashElement from "../../components/hash-element/HashElement"
 import Navbar from "../../components/navbar/Navbar"
 
 
@@ -25,6 +26,7 @@ const Homepage = () => {
     <Partners/>
     <Privacy/>
     <Footer/>
+    <HashElement/>
     </>
   )
 }
