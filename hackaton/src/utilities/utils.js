@@ -51,15 +51,15 @@ export const white = starWhite
 export const navLinks = [
     {
         link: 'TimeLine',
-        path: '#timeline'
+        path: '/#timeline'
     },
     {
         link: 'Overview',
-        path: '#overview',
+        path: '/#overview',
     },
     {
         link: 'FAQs',
-        path: '#faqs'
+        path: '/#faqs'
     },
     {
         link: 'Contact',
